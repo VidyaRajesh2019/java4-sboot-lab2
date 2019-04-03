@@ -15,8 +15,10 @@ import java.lang.annotation.Annotation;
 import java.net.InetAddress;
 import java.util.Properties;
 
-import static junit.framework.TestCase.*;
-import static org.junit.Assert.assertThat;
+import static junit.framework.TestCase.assertNotNull;
+import static junit.framework.TestCase.assertTrue;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -31,7 +33,7 @@ public class SpringAppTests {
                 getAnnotation(org.springframework.boot.autoconfigure.SpringBootApplication.class));
     }
 
-    /* ----- uncomment one test at a time and add just enough code to make it pass -----
+
 
     @Test
     public void componentLoads_Test () {
@@ -102,6 +104,6 @@ public class SpringAppTests {
         assertEquals("You always pass failure on the way to success -- Mickey Rooney",someConfigProperties.getMessageOfTheDay());
     }
 
-     */
+
 
 }
