@@ -14,7 +14,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.net.InetAddress;
 import java.util.Properties;
 
-import static junit.framework.TestCase.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -29,8 +30,6 @@ public class SpringAppDevProfileTests {
         Resource applicationProperties = new ClassPathResource("/application-devl.properties");
         Properties props = PropertiesLoaderUtils.loadProperties(applicationProperties);
     }
-
-    /* ----- uncomment one test at a time and add just enough code to make it pass -----
 
     @Test
     public void someComponentHasExternalizedDevlProfileProperty_Test () throws Exception {
@@ -60,6 +59,6 @@ public class SpringAppDevProfileTests {
         assertEquals("Happiness is the only thing that multiplies when you share it. -- Albert Schweitzer",someConfigProperties.getMessageOfTheDay());
     }
 
-     */
+
 
 }

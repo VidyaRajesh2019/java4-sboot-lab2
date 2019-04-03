@@ -1,6 +1,13 @@
 package edu.cscc.java4.sbootlab;
 
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
+
 import java.net.InetAddress;
+
+
+@Component
+@ConfigurationProperties(prefix="edu.cscc.java4.sbootlab.config")
 
 public class SomeConfigProperties {
 
@@ -8,9 +15,7 @@ public class SomeConfigProperties {
   private InetAddress remoteAddress;
   private String messageOfTheDay;
 
-  public boolean isEnabled() {
-    return enabled;
-  }
+  public boolean isEnabled() {return enabled; }
 
   public void setEnabled(boolean enabled) {
     this.enabled = enabled;
